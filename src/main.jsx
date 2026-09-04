@@ -5,13 +5,10 @@ import './index.css'
 import App from './App.jsx'
 
 const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
-const proxyUrl = import.meta.env.PROD
-  ? `${window.location.origin}/__clerk`
-  : undefined
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ClerkProvider publishableKey={publishableKey} proxyUrl={proxyUrl}>
+    <ClerkProvider publishableKey={publishableKey}>
       <App />
     </ClerkProvider>
   </StrictMode>,
