@@ -1,4 +1,10 @@
 import { useState } from 'react'
+import {
+  Show,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from '@clerk/react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -9,6 +15,23 @@ function App() {
 
   return (
     <>
+      <nav className="auth-controls" aria-label="Account">
+        <Show when="signed-out">
+          <SignInButton mode="modal">
+            <button type="button" className="auth-button secondary">
+              Sign in
+            </button>
+          </SignInButton>
+          <SignUpButton mode="modal">
+            <button type="button" className="auth-button primary">
+              Sign up
+            </button>
+          </SignUpButton>
+        </Show>
+        <Show when="signed-in">
+          <UserButton />
+        </Show>
+      </nav>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
