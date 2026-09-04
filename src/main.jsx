@@ -6,7 +6,7 @@ import App from './App.jsx'
 
 const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const proxyUrl = import.meta.env.PROD
-  ? 'https://food-app-vert-six.vercel.app/__clerk'
+  ? `${window.location.origin}/__clerk`
   : undefined
 
 createRoot(document.getElementById('root')).render(
