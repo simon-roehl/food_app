@@ -1,0 +1,6 @@
+.progress-bar { margin-bottom: 14px; }
+.progress-bar__labels { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 4px; color: var(--text-h); font-size: 14px; text-align: left; }
+.progress-bar__asterisk { margin-left: 2px; color: var(--accent); cursor: help; }
+.progress-bar__amount { color: var(--text); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.progress-bar__track { height: 8px; overflow: hidden; border-radius: 4px; background: var(--code-bg); }
+.progress-bar__fill { height: 100%; border-radius: 4px; transition: width .3s ease, background-color .3s ease; }

@@ -1,0 +1,9 @@
+.week-strip { display: flex; justify-content: space-between; gap: 6px; padding: 16px 24px; border-bottom: 1px solid var(--border); }
+.week-strip__day { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 0; border: none; background: none; color: var(--text); font: inherit; cursor: pointer; }
+.week-strip__weekday { font-size: 12px; }
+.week-strip__date { display: flex; width: 32px; height: 32px; align-items: center; justify-content: center; border-radius: 50%; color: var(--text-h); font-size: 14px; }
+.week-strip__date.is-today { background: var(--accent-bg); color: var(--accent); font-weight: 600; }
+.week-strip__day.is-selected .week-strip__date { background: var(--accent); color: #fff; font-weight: 600; }
+.week-strip__split { font-size: 10px; }
+.week-strip__day.is-selected .week-strip__split { color: var(--accent); font-weight: 600; }
+@media (max-width: 520px) { .week-strip { padding: 12px; } .week-strip__weekday { font-size: 10px; } .week-strip__date { width: 26px; height: 26px; font-size: 12px; } }
