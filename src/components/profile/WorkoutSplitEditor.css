@@ -1,0 +1,8 @@
+.workout-split-editor__cycle { display: flex; flex-direction: column; gap: 6px; max-width: 160px; margin-bottom: 16px; color: var(--text-h); font-size: 13px; text-align: left; }
+.workout-split-editor input { padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text-h); font: inherit; font-size: 14px; }
+.workout-split-editor__days { display: flex; flex-direction: column; gap: 10px; }
+.workout-split-editor__day { display: grid; grid-template-columns: 56px 1fr 140px; align-items: center; gap: 10px; }
+.workout-split-editor__day-label, .workout-split-editor__bonus { color: var(--text); font-size: 13px; text-align: left; }
+.workout-split-editor__bonus { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.workout-split-editor__bonus input { width: 64px; }
+@media (max-width: 520px) { .workout-split-editor__day { grid-template-columns: 44px 1fr; } .workout-split-editor__bonus { grid-column: 1 / -1; } }

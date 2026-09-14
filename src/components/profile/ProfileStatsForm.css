@@ -1,0 +1,5 @@
+.profile-stats-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.profile-stats-form__field { display: flex; flex-direction: column; gap: 6px; color: var(--text-h); font-size: 13px; text-align: left; }
+.profile-stats-form__field input, .profile-stats-form__field select { padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--bg); color: var(--text-h); font: inherit; font-size: 15px; }
+.profile-stats-form__field input:focus-visible, .profile-stats-form__field select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+@media (max-width: 520px) { .profile-stats-form { grid-template-columns: 1fr; } }
