@@ -1,7 +1,7 @@
 import { getUserId, unauthorized } from './_lib/auth'
 import { redis } from './_lib/redis'
 
-export const config = { runtime: 'edge' }
+export const config = { runtime: 'nodejs' }
 
 export default async function handler(request) {
   const userId = await getUserId(request)
