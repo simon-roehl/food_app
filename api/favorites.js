@@ -1,9 +1,7 @@
 import { getUserId, unauthorized } from './_lib/auth'
 import { redis } from './_lib/redis'
 
-export const config = { runtime: 'nodejs' }
-
-export default async function handler(request) {
+async function handler(request) {
   const userId = await getUserId(request)
   if (!userId) return unauthorized()
 
@@ -35,3 +33,5 @@ export default async function handler(request) {
 
   return new Response('Method Not Allowed', { status: 405 })
 }
+
+export default { fetch: handler }

@@ -1,8 +1,6 @@
 import { getUserId, unauthorized } from './_lib/auth'
 import { redis } from './_lib/redis'
 
-export const config = { runtime: 'edge' }
-
 function validProfile(profile) {
   const { sex, age, heightCm, weightKg, dailySteps, goalType, workoutSplit } = profile ?? {}
   return (
@@ -19,7 +17,7 @@ function validProfile(profile) {
   )
 }
 
-export default async function handler(request) {
+async function handler(request) {
   const userId = await getUserId(request)
   if (!userId) return unauthorized()
   const key = `user:${userId}:profile`
@@ -32,3 +30,5 @@ export default async function handler(request) {
   await redis.set(key, profile)
   return Response.json(profile)
 }
+
+export default { fetch: handler }
