@@ -1,5 +1,5 @@
-import { redis } from '../_lib/redis'
-import { mapFdcNutrients } from '../_lib/fdcNutrientMap'
+import { redis } from '../_lib/redis.js'
+import { mapFdcNutrients } from '../_lib/fdcNutrientMap.js'
 
 const FDC_BASE = 'https://api.nal.usda.gov/fdc/v1'
 const TTL = 60 * 60 * 24 * 7

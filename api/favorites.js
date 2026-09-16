@@ -1,5 +1,5 @@
-import { getUserId, unauthorized } from './_lib/auth'
-import { redis } from './_lib/redis'
+import { getUserId, unauthorized } from './_lib/auth.js'
+import { redis } from './_lib/redis.js'
 
 async function handler(request) {
   const userId = await getUserId(request)

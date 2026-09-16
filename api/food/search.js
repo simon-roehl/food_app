@@ -1,4 +1,4 @@
-import { redis } from '../_lib/redis'
+import { redis } from '../_lib/redis.js'
 
 const FDC_BASE = 'https://api.nal.usda.gov/fdc/v1'
 const TTL = 60 * 60 * 24

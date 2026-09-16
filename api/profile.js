@@ -1,5 +1,5 @@
-import { getUserId, unauthorized } from './_lib/auth'
-import { redis } from './_lib/redis'
+import { getUserId, unauthorized } from './_lib/auth.js'
+import { redis } from './_lib/redis.js'
 
 function validProfile(profile) {
   const { sex, age, heightCm, weightKg, dailySteps, goalType, workoutSplit } = profile ?? {}
