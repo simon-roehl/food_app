@@ -4,7 +4,6 @@ import Dashboard from './components/Dashboard'
 import OnboardingWizard from './components/onboarding/OnboardingWizard'
 import SettingsPage from './components/settings/SettingsPage'
 import { api } from './api/client'
-import { mockDailyLogs } from './data/mockDashboard'
 import './App.css'
 
 function App() {
@@ -38,7 +37,7 @@ function App() {
       {profileError && <p className="app__loading">{profileError}</p>}
       {!profileError && profile === undefined && <p className="app__loading">Loading...</p>}
       {!profileError && profile === null && <OnboardingWizard onComplete={setProfile} />}
-      {profile && view === 'dashboard' && <Dashboard profile={profile} dailyLogs={mockDailyLogs} />}
+      {profile && view === 'dashboard' && <Dashboard profile={profile} />}
       {profile && view === 'settings' && <SettingsPage initialProfile={profile} onSaved={setProfile} onClose={() => setView('dashboard')} />}
     </Show>
   </>

@@ -1,0 +1,1 @@
+.manual-food-entry label{display:flex;flex-direction:column;gap:4px;margin:10px 0;font-size:13px}.manual-food-entry__macros{display:grid;grid-template-columns:1fr 1fr;gap:8px}.manual-food-entry__error{color:var(--bar-bad)}.manual-food-entry__actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
